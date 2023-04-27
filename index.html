@@ -18,8 +18,30 @@
         <div>
                 <button id="start-button" class="btn btn-info" onclick="start()">Start</button>
                 <button class="btn btn-info" onclick="stop()">Stop</button>
-                <button class="btn btn-info" onclick="reset()">Reset</button>
+                <button class="btn btn-info" 
+                data-bs-target="#confirmationModal"
+                data-bs-toggle="modal">Reset</button>
         </div>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Reset Warning</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Are you sure, you want to reset your timer?<br>
+                  You can not undo this process
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-modal-button">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="reset()">Reset anyway</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
     </div>
     
